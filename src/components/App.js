@@ -6,7 +6,7 @@ function App(props) {
     const {notify} = props;
     return (
         <div>
-            <button  onClick={notify}>do that</button>
+            <button className='btn btn-primary' onClick={notify}>do that</button>
             {props.bahruz}
         </div>
     );
