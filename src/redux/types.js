@@ -1,1 +1,1 @@
-export const MURAD = 'MURAD';
+export const TYPE = 'TYPE';

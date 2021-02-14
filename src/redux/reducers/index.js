@@ -1,16 +1,9 @@
-import {MURAD} from '../types'
+import {TYPE} from '../types'
 
-export const bahruz = (data = "Salam again" , action) =>{
+export const testReducer = (data = "Test 1" , action) =>{
     switch (action.type){
-        case MURAD :
+        case TYPE :
             return action.payload
-        default :
-            return data;
-    }
-}
-
-export const murad = (data = [] , action) =>{
-    switch (action.type){
         default :
             return data;
     }

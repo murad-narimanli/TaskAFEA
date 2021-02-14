@@ -1,8 +1,8 @@
-import {MURAD} from "../types";
+import {TYPE} from "../types";
 
-export const notify = () => {
+export const testAction = () => {
     return {
-        type: MURAD,
-        payload: 'salam 2'
+        type: TYPE,
+        payload: 'test 2'
     }
 }

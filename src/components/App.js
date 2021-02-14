@@ -1,18 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { notify } from "../redux/actions/";
+import { testAction } from "../redux/actions/";
+
 function App(props) {
-    const {notify} = props;
+    const {testAction} = props;
     return (
         <div>
-            <button className='btn btn-primarys' onClick={notify}>do that</button>
-            {props.bahruz}
+            <button className='btn btn-primary' onClick={testAction}>do that</button>
+            {props.testReducer}
         </div>
     );
 }
 
-const mapStateToProps = ({bahruz, murad}) => {
-    return {bahruz, murad}
+const mapStateToProps = ({testReducer}) => {
+    return {testReducer}
 }
 
-export default connect(mapStateToProps , {notify})(App);
+export default connect(mapStateToProps , {testAction})(App);

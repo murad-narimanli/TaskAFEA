@@ -1,12 +1,12 @@
 import axios from "axios";
 import siteUrl from "./url";
 
-export const vys = axios.create({
+export const api = axios.create({
     baseURL: `${siteUrl}api`,
     headers: { "Content-Type": "application/json" },
 });
 
-vys.interceptors.request.use(
+api.interceptors.request.use(
     (config) => {
         config.headers["Authorization"] = localStorage.getItem("access_token")
             ? "Bearer " + localStorage.getItem("access_token")
@@ -21,4 +21,4 @@ vys.interceptors.request.use(
     }
 );
 
-export default vys;
+export default api;
