@@ -1,13 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import { testAction } from "../redux/actions/";
+import Header from "./Layout/Header/Header";
+import Footer from "./Layout/Footer/Footer";
+import Routing from "./Layout/Routing/Routing";
+
 
 function App(props) {
     const {testAction} = props;
     return (
         <div>
-            <button className='btn btn-primary' onClick={testAction}>do that</button>
-            {props.testReducer}
+            <Header/>
+            <Routing/>
+            <Footer/>
         </div>
     );
 }
